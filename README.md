@@ -16,11 +16,11 @@ We prepare a Dockerfile to start the PX4 Clover simulation with ROS Noetic. You 
 
 In the beginning, we want to compare some the-state-of-the-art algorithms for efficient object detection and measure their performance on Raspberry Pi4 with Intel Neural Computer Stick 2.
 
-| Model                                                                                         	| Input resolution 	| COCO mAP 	| Params 	| FPS 	|
+| Model                                                                                         	| Input resolution 	| COCO mAP 	| Params [M] 	| FPS 	|
 |-----------------------------------------------------------------------------------------------	|:----------------:	|:--------:	|:------:	|:---:	|
 | [YOLOv4-tiny](https://github.com/AlexeyAB/darknet)                                            	|      416*416     	|          	|        	|     	|
-| [NanoDet-g](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   22.9   	|  3.81M 	|     	|
-| [NanoDet-t](https://github.com/RangiLyu/nanodet)                                              	|      320*320     	|   21.7   	|  1.36M 	|     	|
+| [NanoDet-t](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   23.5   	|  0.95 	|     	|
+| [NanoDet-m](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   22.9   	|  3.81 	|     	|
 | [PicoDet-S](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   30.6   	|  0.99  	|     	|
 | [PicoDet-L](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   36.6   	|  3.30  	|     	|
 | [YOLOX-Nano](https://github.com/Megvii-BaseDetection/YOLOX)                                   	|      416*416     	|   25.8   	|  0.91  	|     	|
