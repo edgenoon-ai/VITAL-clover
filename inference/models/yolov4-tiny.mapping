@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="000_net" output_port_id="000_net" />
+		<IR name="000_net" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="001_convolutional_bn/mean/Fused_Mul__copy" output_port_id="001_convolutional_conv_weights" />
+		<IR name="001_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="001_convolutional_bn/variance/Fused_Add_" output_port_id="001_convolutional_bn" />
+		<IR name="001_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="001_convolutional_lrelu" output_port_id="001_convolutional_lrelu" />
+		<IR name="001_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="002_convolutional_bn/mean/Fused_Mul__copy" output_port_id="002_convolutional_conv_weights" />
+		<IR name="002_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="002_convolutional_bn/variance/Fused_Add_" output_port_id="002_convolutional_bn" />
+		<IR name="002_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="002_convolutional_lrelu" output_port_id="002_convolutional_lrelu" />
+		<IR name="002_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="003_convolutional_bn/mean/Fused_Mul__copy" output_port_id="003_convolutional_conv_weights" />
+		<IR name="003_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="003_convolutional_bn/variance/Fused_Add_" output_port_id="003_convolutional_bn" />
+		<IR name="003_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="003_convolutional_lrelu" output_port_id="003_convolutional_lrelu" />
+		<IR name="003_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="004_route/VariadicSplit" output_port_id="004_route" />
+		<IR name="004_route/VariadicSplit" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="005_convolutional_bn/mean/Fused_Mul__copy" output_port_id="005_convolutional_conv_weights" />
+		<IR name="005_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="005_convolutional_bn/variance/Fused_Add_" output_port_id="005_convolutional_bn" />
+		<IR name="005_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="005_convolutional_lrelu" output_port_id="005_convolutional_lrelu" />
+		<IR name="005_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="006_convolutional_bn/mean/Fused_Mul__copy" output_port_id="006_convolutional_conv_weights" />
+		<IR name="006_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="006_convolutional_bn/variance/Fused_Add_" output_port_id="006_convolutional_bn" />
+		<IR name="006_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="006_convolutional_lrelu" output_port_id="006_convolutional_lrelu" />
+		<IR name="006_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="007_route" output_port_id="007_route" />
+		<IR name="007_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="008_convolutional_bn/mean/Fused_Mul__copy" output_port_id="008_convolutional_conv_weights" />
+		<IR name="008_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="008_convolutional_bn/variance/Fused_Add_" output_port_id="008_convolutional_bn" />
+		<IR name="008_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="008_convolutional_lrelu" output_port_id="008_convolutional_lrelu" />
+		<IR name="008_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="009_route" output_port_id="009_route" />
+		<IR name="009_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="010_maxpool" output_port_id="010_maxpool" />
+		<IR name="010_maxpool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="011_convolutional_bn/mean/Fused_Mul__copy" output_port_id="011_convolutional_conv_weights" />
+		<IR name="011_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="011_convolutional_bn/variance/Fused_Add_" output_port_id="011_convolutional_bn" />
+		<IR name="011_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="011_convolutional_lrelu" output_port_id="011_convolutional_lrelu" />
+		<IR name="011_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="012_route/VariadicSplit" output_port_id="012_route" />
+		<IR name="012_route/VariadicSplit" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="013_convolutional_bn/mean/Fused_Mul__copy" output_port_id="013_convolutional_conv_weights" />
+		<IR name="013_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="013_convolutional_bn/variance/Fused_Add_" output_port_id="013_convolutional_bn" />
+		<IR name="013_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="013_convolutional_lrelu" output_port_id="013_convolutional_lrelu" />
+		<IR name="013_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="014_convolutional_bn/mean/Fused_Mul__copy" output_port_id="014_convolutional_conv_weights" />
+		<IR name="014_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="014_convolutional_bn/variance/Fused_Add_" output_port_id="014_convolutional_bn" />
+		<IR name="014_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="014_convolutional_lrelu" output_port_id="014_convolutional_lrelu" />
+		<IR name="014_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="015_route" output_port_id="015_route" />
+		<IR name="015_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="016_convolutional_bn/mean/Fused_Mul__copy" output_port_id="016_convolutional_conv_weights" />
+		<IR name="016_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="016_convolutional_bn/variance/Fused_Add_" output_port_id="016_convolutional_bn" />
+		<IR name="016_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="016_convolutional_lrelu" output_port_id="016_convolutional_lrelu" />
+		<IR name="016_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="017_route" output_port_id="017_route" />
+		<IR name="017_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="018_maxpool" output_port_id="018_maxpool" />
+		<IR name="018_maxpool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="019_convolutional_bn/mean/Fused_Mul__copy" output_port_id="019_convolutional_conv_weights" />
+		<IR name="019_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="019_convolutional_bn/variance/Fused_Add_" output_port_id="019_convolutional_bn" />
+		<IR name="019_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="019_convolutional_lrelu" output_port_id="019_convolutional_lrelu" />
+		<IR name="019_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="020_route/VariadicSplit" output_port_id="020_route" />
+		<IR name="020_route/VariadicSplit" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="021_convolutional_bn/mean/Fused_Mul__copy" output_port_id="021_convolutional_conv_weights" />
+		<IR name="021_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="021_convolutional_bn/variance/Fused_Add_" output_port_id="021_convolutional_bn" />
+		<IR name="021_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="021_convolutional_lrelu" output_port_id="021_convolutional_lrelu" />
+		<IR name="021_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="022_convolutional_bn/mean/Fused_Mul__copy" output_port_id="022_convolutional_conv_weights" />
+		<IR name="022_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="022_convolutional_bn/variance/Fused_Add_" output_port_id="022_convolutional_bn" />
+		<IR name="022_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="022_convolutional_lrelu" output_port_id="022_convolutional_lrelu" />
+		<IR name="022_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="023_route" output_port_id="023_route" />
+		<IR name="023_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="024_convolutional_bn/mean/Fused_Mul__copy" output_port_id="024_convolutional_conv_weights" />
+		<IR name="024_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="024_convolutional_bn/variance/Fused_Add_" output_port_id="024_convolutional_bn" />
+		<IR name="024_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="024_convolutional_lrelu" output_port_id="024_convolutional_lrelu" />
+		<IR name="024_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="025_route" output_port_id="025_route" />
+		<IR name="025_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="026_maxpool" output_port_id="026_maxpool" />
+		<IR name="026_maxpool" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="027_convolutional_bn/mean/Fused_Mul__copy" output_port_id="027_convolutional_conv_weights" />
+		<IR name="027_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="027_convolutional_bn/variance/Fused_Add_" output_port_id="027_convolutional_bn" />
+		<IR name="027_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="027_convolutional_lrelu" output_port_id="027_convolutional_lrelu" />
+		<IR name="027_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="028_convolutional_bn/mean/Fused_Mul__copy" output_port_id="028_convolutional_conv_weights" />
+		<IR name="028_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="028_convolutional_bn/variance/Fused_Add_" output_port_id="028_convolutional_bn" />
+		<IR name="028_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="028_convolutional_lrelu" output_port_id="028_convolutional_lrelu" />
+		<IR name="028_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="033_convolutional_bn/mean/Fused_Mul__copy" output_port_id="033_convolutional_conv_weights" />
+		<IR name="033_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="033_convolutional_bn/variance/Fused_Add_" output_port_id="033_convolutional_bn" />
+		<IR name="033_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="033_convolutional_lrelu" output_port_id="033_convolutional_lrelu" />
+		<IR name="033_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="034_upsample" output_port_id="034_upsample" />
+		<IR name="034_upsample" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="035_route" output_port_id="035_route" />
+		<IR name="035_route" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="036_convolutional_bn/mean/Fused_Mul__copy" output_port_id="036_convolutional_conv_weights" />
+		<IR name="036_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="036_convolutional_bn/variance/Fused_Add_" output_port_id="036_convolutional_bn" />
+		<IR name="036_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="036_convolutional_lrelu" output_port_id="036_convolutional_lrelu" />
+		<IR name="036_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="037_convolutional_conv_weights" output_port_id="037_convolutional_conv_weights" />
+		<IR name="037_convolutional_conv_weights" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="037_convolutional" output_port_id="037_convolutional" />
+		<IR name="037_convolutional" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="029_convolutional_bn/mean/Fused_Mul__copy" output_port_id="029_convolutional_conv_weights" />
+		<IR name="029_convolutional_bn/mean/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="029_convolutional_bn/variance/Fused_Add_" output_port_id="029_convolutional_bn" />
+		<IR name="029_convolutional_bn/variance/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="029_convolutional_lrelu" output_port_id="029_convolutional_lrelu" />
+		<IR name="029_convolutional_lrelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="030_convolutional_conv_weights" output_port_id="030_convolutional_conv_weights" />
+		<IR name="030_convolutional_conv_weights" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="030_convolutional" output_port_id="030_convolutional" />
+		<IR name="030_convolutional" output_port_id="2" />
+	</map>
+</mapping>
