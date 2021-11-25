@@ -19,9 +19,9 @@ In the beginning, we want to compare some the-state-of-the-art algorithms for ef
 | Model                                                                                         	| Input resolution 	| COCO mAP 	| UAVVaste 1 class mAP 	|  Params [M] 	| FPS Ri4 + NCS2 	|
 |-----------------------------------------------------------------------------------------------	|:----------------:	|:--------:	|:------:	|:------:	|:---:	|
 | [YOLOv4-tiny](https://github.com/AlexeyAB/darknet)                                            	|      416*416     	|          	|        	|        	|     	|
-| [NanoDet-t](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   23.5   	|   	    | 0.95       	|     	|
-| [NanoDet-m](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   22.9   	|   	    | 3.81       	|     	|
-| [PicoDet-S](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   30.6   	| 	      |  0.99  |     	| not compatible
-| [PicoDet-L](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   36.6   	|  	      | 3.30         	| not compatible |
+| [NanoDet-t](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   23.5   	| 24.90 | 0.95       	|     	|
+| [NanoDet-m](https://github.com/RangiLyu/nanodet)                                              	|      416*416     	|   22.9   	| 24.30 | 3.81       	|     	|
+| [PicoDet-S](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   30.6   	| - |  0.99  |not compatible | 
+| [PicoDet-L](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.3/configs/picodet) 	|      416*416     	|   36.6   	| - | 3.30         	| not compatible |
 | [YOLOX-Nano](https://github.com/Megvii-BaseDetection/YOLOX)                                   	|      416*416     	|   25.8   	| 22.65 | 0.91         	|     	|
 | [YOLOX-Tiny](https://github.com/Megvii-BaseDetection/YOLOX)                                   	|      416*416     	|   32.8   	| 31.03 | 5.06         	|     	|
