@@ -1,4 +1,4 @@
-docker build -t putm-fsds -f Dockerfile . --no-cache
+docker build -t px4-clover -f Dockerfile . --no-cache
 
 mkdir $HOME/shared
 
