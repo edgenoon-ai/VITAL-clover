@@ -13,11 +13,13 @@ RUN apt update
 RUN apt install -y tzdata
 
 # install AirSim requirements
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends \
+RUN apt update
+RUN apt install -y --no-install-recommends \
 	python3 \
 	python3-pip \
     python3-tk \
+    python3-rosdep \
+    build-essential \
 	libglu1-mesa-dev \
 	xdg-user-dirs \
 	pulseaudio \
@@ -38,7 +40,7 @@ RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 # Create the workspace and clone Clover sources:
 RUN mkdir -p ~/catkin_ws/src && \
     cd ~/catkin_ws/src && \
-    git clone --depth 1 https://github.com/CopterExpress/clover && \
+    git clone --depth 1 https://github.com/edgenoon-ai/clover && \
     git clone --depth 1 https://github.com/CopterExpress/ros_led && \
     git clone --depth 1 https://github.com/ethz-asl/mav_comm
 
@@ -54,7 +56,8 @@ RUN sudo /usr/bin/python3 -m pip install -r ~/catkin_ws/src/clover/clover/requir
 RUN cd ~/catkin_ws/src && \
     git clone --recursive --depth 1 --branch v1.12.0 https://github.com/PX4/PX4-Autopilot.git ~/PX4-Autopilot && \
     ln -s ~/PX4-Autopilot ~/catkin_ws/src/PX4-Autopilot && \
-    ln -s ~/PX4-Autopilot/Tools/sitl_gazebo ~/catkin_ws/src/sitl_gazebo
+    ln -s ~/PX4-Autopilot/Tools/sitl_gazebo ~/catkin_ws/src/sitl_gazebo && \
+    ln -s ~/PX4-Autopilot/mavlink ~/catkin_ws/src/
 
 # Install PX4 prerequisites
 RUN cd ~/catkin_ws/src/PX4-Autopilot/Tools/setup && \
