@@ -1,5 +1,5 @@
 # use image with cuda drivers and vulkan
-FROM px4io/px4-dev-ros-noetic:latest
+FROM px4io/px4-dev-ros-melodic:latest
 
 USER root
 # Install sudo
@@ -14,11 +14,8 @@ RUN apt install -y tzdata
 
 # install AirSim requirements
 RUN apt update
+
 RUN apt install -y --no-install-recommends \
-	python3 \
-	python3-pip \
-    python3-tk \
-    python3-rosdep \
     build-essential \
 	libglu1-mesa-dev \
 	xdg-user-dirs \
@@ -33,42 +30,26 @@ RUN apt install -y --no-install-recommends \
 	vim \ 
 	nano
 
-ENV ROS_PYTHON_VERSION=3
-ENV ROS_DISTRO=noetic
-RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+ENV ROS_DISTRO=melodic
+RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 # Create the workspace and clone Clover sources:
-RUN mkdir -p ~/catkin_ws/src && \
-    cd ~/catkin_ws/src && \
-    git clone --depth 1 https://github.com/edgenoon-ai/clover && \
-    git clone --depth 1 https://github.com/CopterExpress/ros_led && \
-    git clone --depth 1 https://github.com/ethz-asl/mav_comm
-
-# Install all prerequisites using rosdep
-RUN cd ~/catkin_ws && \
-    rosdep update && \
-    rosdep install --from-paths src --ignore-src -y
-
-# Install Python-dependencies:
-RUN sudo /usr/bin/python3 -m pip install -r ~/catkin_ws/src/clover/clover/requirements.txt
-
-# Get PX4 sources
-RUN cd ~/catkin_ws/src && \
+RUN cd ~/ && \
     git clone --recursive --depth 1 --branch v1.12.0 https://github.com/PX4/PX4-Autopilot.git ~/PX4-Autopilot && \
-    ln -s ~/PX4-Autopilot ~/catkin_ws/src/PX4-Autopilot && \
-    ln -s ~/PX4-Autopilot/Tools/sitl_gazebo ~/catkin_ws/src/sitl_gazebo && \
-    ln -s ~/PX4-Autopilot/mavlink ~/catkin_ws/src/
+    cd ~/PX4-Autopilot && \
+    DONT_RUN=1 make px4_sitl_default gazebo
+    
 
-# Install PX4 prerequisites
-RUN cd ~/catkin_ws/src/PX4-Autopilot/Tools/setup && \
+# # Install PX4 prerequisites
+RUN cd ~/PX4-Autopilot/Tools/setup && \
     sudo ./ubuntu.sh --no-nuttx
 
-# Install geographiclib datasets
-RUN sudo /opt/ros/noetic/lib/mavros/install_geographiclib_datasets.sh
+RUN apt install -y ros-melodic-cv-bridge ros-melodic-mavros ros-melodic-mavros-extras
 
-RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/catkin_ws; catkin_make'
+RUN wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh && bash ./install_geographiclib_datasets.sh
 
-RUN echo "source /root/catkin_ws/devel/setup.bash" >> ~/.bashrc
+RUN cd ~/PX4-Autopilot && \
+    DONT_RUN=1 make px4_sitl_default gazebo && \
+    ./Tools/setup_gazebo.bash /root/PX4-Autopilot /root/PX4-Autopilot/build/px4_sitl_default
 
-# Add the Clover airframe
-RUN cp /root/catkin_ws/src/clover/clover_simulation/airframes/4500_clover ~/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/
+RUN echo "ROS_PACKAGE_PATH=/opt/ros/melodic/share/:/root/PX4-Autopilot:/root/PX4-Autopilot/Tools/sitl_gazebo" >> ~/.bashrc
